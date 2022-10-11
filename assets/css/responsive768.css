@@ -1,0 +1,41 @@
+@media screen and (max-width: 768px) {
+
+    html {
+        font-size: 100%;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .nav_top {
+        text-align: center;
+    }
+
+     .nav {
+        display: none;
+     }
+
+    .footer {
+        text-align: center;
+    }
+
+
+}

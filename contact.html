@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="assets/css/responsive768.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <title>Jarditou contact</title>
+</head>
+<body>
+<!-- -----Logo et descriptif----- -->
+<header>
+    <div class="logo">
+        <img class="logojardi" src="assets/src/img/jarditou_logo.jpg" alt="logo" title="logo">
+        <p class="legend">Tout le jardin</p>
+    </div>
+</header>
+<!-- -----Menu nav----- -->
+<nav class="nav_top">
+    <ul class="nav">
+        <li><a class="anav" href="index.html">Accueil</a></li>
+        <li><a class="anav" href="tableau.html">Tableau</a></li>
+        <li><a class="anav" href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<!-- ----Bandeau promo----- -->
+<div class="promo">
+    <img class="landing" src="assets/src/img/promotion.jpg" alt="promo lames" title="Promo lames">
+</div>
+<!-- ----Contenu principal----- -->
+<!-- -----Formulaire----- -->
+        <main id="form">
+            <h1 class="title">Contact</h1>
+            <form action="https://bienvu.net/script.php " method="get">
+                <p class="asterix">Ces zones sont obligatoires</p>
+                <fieldset>
+                    <legend>Vos coordonnées</legend>
+                    <label for="nom" >Votre nom* :</label><input type="text" name="nom" id="nom" required><br>
+                    <label for="prenom">Votre prenom :</label><input type="text" name="prenom" id="prenom"><br>
+                    <!-- -----Création d'un bouton radio requis avec homme pour valeur par défaut----- -->
+                    <div>
+                        <p>Sexe* :</p>
+                        <input type="radio" name="sexe" id="man" value="Homme" checked>
+                        <label for="man">Homme</label>
+                        <input type="radio" name="sexe" id="woman" value="Femme">
+                        <label for="woman">Femme</label>
+                    </div>
+
+                    <label for="birth">Date de naissance* :</label><input type="date" name="birth" id="birth" required><br>
+                    <label for="cd">Code postal* :</label><input type="text" name="cd" id="cd" required><br>
+                    <label for="adress">Adresse :</label><input type="text" name="adress" id="adress"><br>
+                    <label for="city">Ville :</label><input type="text" name="city" id="city"><br>
+                    <label for="email">Email :</label><input type="text" id="email">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Votre demande :</legend>
+                    <label for="sujet">Sujet* :</label>
+                    <select name="sujet" id="sujet">
+                        <option value="commandes">Mes commandes</option>
+                        <option value="questions">Questions sur un produit</option>
+                        <option value="reclamation">Réclamation</option>
+                        <option value="autres">Autres</option>
+                    </select><br>
+                    <label for="question">Votre question* :</label><textarea name="question" id="question" cols="15" rows="2"></textarea>
+                </fieldset>
+                <p>
+                    <input type="submit" value="Envoyer">
+                    <input type="reset" value="Annuler">
+                </p>
+
+
+            </form>
+
+        </main>
+<!-- -----Début footer----- -->
+<footer>
+    <div class="footer">
+        <ul class="nav">
+            <li><a class="bottom" href="#">Mentions légales</a></li>
+            <li><a class="bottom" href="#">Horaires</a></li>
+            <li><a class="bottom" href="#">Plan du site</a></li>
+        </ul>
+    </div>
+</footer>
+<!-- -----Fin de page----- -->
+</body>
+</html>
