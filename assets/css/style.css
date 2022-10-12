@@ -76,8 +76,6 @@ a.bottom {
     margin: auto 10px;    
 }
 
-
-
 /* --------------------Page Index-------------------- */
 
 section {
@@ -104,27 +102,26 @@ p {
 
 /* --------------------Page Tableau-------------------- */
 
-@media (max-width: 768px){
-    .table thead {
-        display: none;
-    }
+table {
+    background: #34495E;
+    color: #fff;
+    border-radius: .4em;
+    overflow: hidden;
+}
 
-    .table tr{
-        display: block;
-        margin-bottom: 40px;
-    }
-
-    .table td {
-        display: block;
-        text-align: right;
-    }
-
-    .table td:before {
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
+th, td {
+    margin: .5em 1em;    
+    text-align: center;
+    @media (min-width: $breakpoint-alpha) { 
+    padding: 1em !important; 
     }
 }
+
+th, td:before {
+    color: #dd5;
+}
+
+
 
 /* --------------------Page Contact-------------------- */
 
