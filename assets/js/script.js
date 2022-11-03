@@ -15,9 +15,13 @@ let dateNaissanceM = document.getElementById("dateNaissanceManquant");
 // Code postal
 let codePostal = document.getElementById("cd");
 let codePostalM = document.getElementById("codePostalManquant");
+// Adresse mail
+let email = document.getElementById("email");
+let emailM = document.getElementById("emailManquant");
 // Regex
-let regexString = new RegExp(/^[a-z ,.'-]+$/i);
-let regexCodePostal = new RegExp(/^([A-Z0-9]{5})$/);
+let regexString = /^[a-z ,.'-]+$/i;
+let regexCodePostal = /^([0-9]{5})$/;
+let regexMail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 
 // Prénom
@@ -27,7 +31,7 @@ function fValid(e) {
         prenomM.textContent = "Prénom manquant";
         prenomM.style.color = "red";
     } else if (regexString.test(prenom.value) === false) {
-        event.preventDefault();
+        e.preventDefault();
         prenomM.textContent = "Format incorrect";
         prenomM.style.color = "orange";
     } else {
@@ -42,7 +46,7 @@ function fValid2(e) {
         nomM.textContent = "Prénom manquant";
         nomM.style.color = "red";
     } else if (regexString.test(nom.value) === false) {
-        event.preventDefault();
+        e.preventDefault();
         nomM.textContent = "Format incorrect";
         nomM.style.color = "orange";
     } else {
@@ -57,7 +61,7 @@ function fValid3(e) {
         villeM.textContent = "Ville manquante";
         villeM.style.color = "red";
     } else if (regexString.test(nom.value) === false) {
-        event.preventDefault();
+        e.preventDefault();
         villeM.textContent = "Format incorrect";
         villeM.style.color = "orange";
     } else {
@@ -83,9 +87,24 @@ function fValid5(e) {
         codePostalM.textContent = "Code postal manquant";
         codePostalM.style.color = "red";
     } else if (regexCodePostal.test(nom.value) === false) {
-        event.preventDefault();
+        e.preventDefault();
         codePostalM.textContent = "Format incorrect";
         codePostalM.style.color = "orange";
+    } else {
+
+    }
+}
+
+// Email
+function fValid6(e) {
+    if (email.value === "") {
+        e.preventDefault();
+        emailM.textContent = "Adresse mail manquante";
+        emailM.style.color = "red";
+    } else if (regexMail.test(nom.value) === false) {
+        e.preventDefault();
+        emailM.textContent = "Format incorrect";
+        emailM.style.color = "orange";
     } else {
 
     }
@@ -97,3 +116,4 @@ validation.addEventListener("click", fValid2);
 validation.addEventListener("click", fValid3);
 validation.addEventListener("click", fValid4);
 validation.addEventListener("click", fValid5);
+validation.addEventListener("click", fValid6);
