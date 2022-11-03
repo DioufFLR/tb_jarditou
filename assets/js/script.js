@@ -8,7 +8,7 @@ let prenom = document.getElementById("prenom");
 let prenomM = document.getElementById("prenomManquant");
 // Regex
 let regexNomPrenom = /^[a-zA-Zéèîï][a-zéèàçîï]+([-'\s] [a-zA-Zéèîï][a-zéèàçîï]+)?/;
-let regexAdresse =
+// let regexAdresse =
 
 // fonction pour vérifier les champs
 function fValid(e) {
