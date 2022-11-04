@@ -36,11 +36,29 @@ myForm.addEventListener("submit", function (e) {
     }
 });
 
+// Date de naissance
+
+myForm.addEventListener("submit", function (e) {
+    let myInput = document.getElementById("prenom");
+    let regexString = new RegExp(/^[a-zA-Z-\s]+$/);
+    if (myInput.value.trim() === "") {
+        let prenomM = document.getElementById("prenomManquant");
+        prenomM.innerHTML = "Le prenom est requis.";
+        prenomM.style.color = 'red';
+        e.preventDefault();
+    } else if (regexString.test(myInput.value) === false) {
+        let prenomM = document.getElementById("prenomManquant");
+        prenomM.innerHTML = "Le format est incorrect.";
+        prenomM.style.color = 'blue';
+        e.preventDefault();
+    }
+});
+
 // Code postale
 
 myForm.addEventListener("submit", function (e) {
     let myInput = document.getElementById("cd");
-    let regexCD = new RegExp(/^(([1-95]{2}|2A|2B)[0-9]{3})$|^[971-974]$/);
+    let regexCD = new RegExp(/^([0-9]{5})$/);
     if (myInput.value.trim() === "") {
         let codePostalM = document.getElementById("codePostalManquant");
         codePostalM.innerHTML = "Le code postal est requis.";
