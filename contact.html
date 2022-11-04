@@ -74,15 +74,21 @@
                     <legend>Votre demande :</legend>
                     <label for="sujet">Sujet* :</label>
                     <select name="sujet" id="sujet">
+                        <option value="">Veuillez choisir un sujet</option>
                         <option value="commandes">Mes commandes</option>
                         <option value="questions">Questions sur un produit</option>
                         <option value="reclamation">Réclamation</option>
                         <option value="autres">Autres</option>
-                    </select><br>
+                    </select>
+                    <br>
+                    <span id="sujetManquant"></span>
                     <label for="question">Votre question* :</label><textarea name="question" id="question" cols="15" rows="2"></textarea>
+                    <br>
+                    <span id="questionManquante"></span>
                 </fieldset>
 
-                <p>* J'accepte le traitement informatique de ce formulaire</p>
+                <label for="check"></label>* J'accepte le traitement informatique de ce formulaire<input type="checkbox" name="check" id="check" required>
+
 
                 <div class="submit">
                     <input type="submit" value="Envoyer" id="boutonEnvoi">

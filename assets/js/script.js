@@ -65,3 +65,46 @@ myForm.addEventListener("submit", function (e) {
         e.preventDefault();
     }
 });
+
+// Email
+
+myForm.addEventListener("submit", function (e) {
+    let myInput = document.getElementById("email");
+    let regexCD = new RegExp(/^(([^<>()[]\.,;:s@]+(.[^<>()[]\.,;:s@]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/);
+    if (myInput.value.trim() === "") {
+        let emailM = document.getElementById("emailManquant");
+        emailM.innerHTML = "Votre email est requis.";
+        emailM.style.color = 'red';
+        e.preventDefault();
+    } else if (regexCD.test(myInput.value) === false) {
+        let emailM = document.getElementById("emailManquant");
+        emailM.innerHTML = "Le format est incorrect.";
+        emailM.style.color = 'blue';
+        e.preventDefault();
+    }
+});
+
+// Sujet
+
+myForm.addEventListener("submit", function (e) {
+    let myInput = document.getElementById("sujet");
+    if (myInput.value.trim() === "") {
+        let emailM = document.getElementById("sujetManquant");
+        emailM.innerHTML = "Champs requis.";
+        emailM.style.color = 'red';
+        e.preventDefault();
+    }
+});
+
+// Question
+
+myForm.addEventListener("submit", function (e) {
+    let myInput = document.getElementById("question");
+    if (myInput.value.trim() === false) {
+        let questionM = document.getElementById("questionManquante");
+        questionM.innerHTML = "Commentaire requis.";
+        questionM.style.color = 'red';
+        e.preventDefault();
+    }
+});
+
