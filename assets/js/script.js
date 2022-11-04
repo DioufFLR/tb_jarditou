@@ -39,17 +39,11 @@ myForm.addEventListener("submit", function (e) {
 // Date de naissance
 
 myForm.addEventListener("submit", function (e) {
-    let myInput = document.getElementById("prenom");
-    let regexString = new RegExp(/^[a-zA-Z-\s]+$/);
+    let myInput = document.getElementById("birth");
     if (myInput.value.trim() === "") {
-        let prenomM = document.getElementById("prenomManquant");
-        prenomM.innerHTML = "Le prenom est requis.";
-        prenomM.style.color = 'red';
-        e.preventDefault();
-    } else if (regexString.test(myInput.value) === false) {
-        let prenomM = document.getElementById("prenomManquant");
-        prenomM.innerHTML = "Le format est incorrect.";
-        prenomM.style.color = 'blue';
+        let dateM = document.getElementById("dateNaissanceManquant");
+        dateM.innerHTML = "Votre date est requise.";
+        dateM.style.color = 'red';
         e.preventDefault();
     }
 });
