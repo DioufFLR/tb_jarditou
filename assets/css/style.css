@@ -113,9 +113,6 @@ table {
 th, td {
     margin: .5em 1em;    
     text-align: center;
-    @media (min-width: $breakpoint-alpha) { 
-    padding: 1em !important; 
-    }
 }
 
 th, td:before {
@@ -177,8 +174,61 @@ input[type=submit], input[type=reset] {
     cursor:pointer;
 }
 
+/* Média querryes*/
 
+@media screen and (max-width: 768px) {
 
+    html {
+        font-size: 100%;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .right {
+        display: none;
+    }
+
+    nav.nav_top {
+        height: 80px;
+    }
+
+    ul.nav {
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.footer {
+        height: 80px;
+    }
+
+    #form{
+        display: flex;
+        justify-content: center;
+        flex-direction:column;
+        align-items: center;
+        margin: 10px 30px 20px 0px;
+        padding: 30px 50px 20px 20px;
+        width: 90%;
+        line-height: 0.5cm;
+    }
+
+}
 
 
 
